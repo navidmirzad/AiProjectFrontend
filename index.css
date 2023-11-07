@@ -1,0 +1,82 @@
+/* Improved CSS for the navigation bar and footer */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* Light gray background */
+}
+
+nav {
+    background-color: #1e202a; /* Dark gray navigation bar */
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px; /* Slightly smaller text */
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    margin: 0px;
+    text-align: center;
+}
+
+.movie-container {
+    text-align: center;
+}
+
+/* CSS for styling the submit button */
+button[type="submit"] {
+    background-color: #0074D9; /* Background color */
+    color: #fff; /* Text color */
+    padding: 10px 20px; /* Padding around text */
+    font-size: 18px; /* Font size */
+    border: none; /* Remove the border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Show hand cursor on hover */
+    transition: background-color 0.3s; /* Smooth color transition on hover */
+}
+
+button[type="submit"]:hover {
+    background-color: #0056A0; /* Darker background color on hover */
+}
+
+#answerBox {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff; /* White content background */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    border-radius: 12px;
+}
+
+footer {
+    background-color: #1e202a; /* Dark gray footer */
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
