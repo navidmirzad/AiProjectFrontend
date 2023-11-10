@@ -11,64 +11,93 @@
 <body>
 
 <nav>
-    <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Contact</a></li>
-    </ul>
+    <div class="logo">Home</div>
+    <div class="nav-items">
+        <a href="/">Services</a> <a href="/">About</a> <a href="/">Contact</a>
+    </div>
 </nav>
 
-<div class="container">
-    <h1>Welcome to our Movie Recommender!</h1>
-</div>
-<br> <br>
 
-<h2>Movie Genres: </h2>
-<hr>
-<div class="movie-container">
+<section class="hero">
+    <div class="hero-container">
+        <div class="column-left">
+            <h1>Welcome to our Movie Recommender!</h1>
+            <p>
+                Discover your cinematic cravings!
+                Enter your favorite genre, movie, actor, and unlock
+                a personalized recommendation for your next movie night adventure!
+            </p>
+            <button>Lets get Started!</button>
+        </div>
+        <div class="column-right">
+            <!-- Image here -->
+        </div>
+    </div>
+</section>
+
+<div class="genre-section">
+<h2>Pick a Genre </h2>
+    <hr>
+
+    <div class="movie-container">
     <form method="POST" id="form" action="/chat">
 
-        <input type="checkbox" id="action" name="genre" value="action">
-        <label for="action">Action</label>
+        <div class="row">
+            <!--<input type="checkbox" id="action" name="genre" value="action">
+            <label for="action">Action</label>-->
 
-        <input type="checkbox" id="comedy" name="genre" value="comedy">
-        <label for="comedy">Comedy</label>
+            <input type="checkbox" id="comedy" name="genre" value="comedy">
+            <label for="comedy">Comedy</label>
 
-        <input type="checkbox" id="drama" name="genre" value="drama">
-        <label for="drama">Drama</label>
+            <input type="checkbox" id="drama" name="genre" value="drama">
+            <label for="drama">Drama</label>
 
-        <input type="checkbox" id="horror" name="genre" value="horror">
-        <label for="horror">Horror</label>
+            <input type="checkbox" id="horror" name="genre" value="horror">
+            <label for="horror">Horror</label>
+        </div>
 
-        <input type="checkbox" id="sci-fi" name="genre" value="sci-fi">
-        <label for="sci-fi">Sci-Fi</label>
+        <div class="row">
+            <input type="checkbox" id="sci-fi" name="genre" value="sci-fi">
+            <label for="sci-fi">Sci-Fi</label>
 
-        <input type="checkbox" id="fantasy" name="genre" value="fantasy">
-        <label for="fantasy">Fantasy</label>
+            <input type="checkbox" id="fantasy" name="genre" value="fantasy">
+            <label for="fantasy">Fantasy</label>
 
-        <input type="checkbox" id="crime" name="genre" value="crime">
-        <label for="crime">Crime</label>
+            <input type="checkbox" id="crime" name="genre" value="crime">
+            <label for="crime">Crime</label>
+        </div>
 
-        <input type="checkbox" id="animation" name="genre" value="animation">
-        <label for="animation">Animation</label>
+        <div class="row">
+            <input type="checkbox" id="animation" name="genre" value="animation">
+            <label for="animation">Animation</label>
 
-        <input type="checkbox" id="thriller" name="genre" value="thriller">
-        <label for="thriller">Thriller</label>
+            <input type="checkbox" id="thriller" name="genre" value="thriller">
+            <label for="thriller">Thriller</label>
 
-        <input type="checkbox" id="documentary" name="genre" value="documentary">
-        <label for="documentary">Documentary</label>
-
-        <hr> <br>
-        <h2>Previously watched movies & actors you liked</h2>
-        <hr>
-
-        <textarea id="multi-line-input" name="moviesAndActors" rows="10" cols="80" placeholder="Bullet Train with Brad Pitt..."></textarea>
-        <br> <br>
-        <input type="hidden" id="requestInput" name="request" value="">
-        <button type="submit" id="submitBtn">Submit</button>
+            <input type="checkbox" id="documentary" name="genre" value="documentary">
+            <label for="documentary">Documentary</label>
+        </div>
     </form>
+    </div>
+    <hr>
 </div>
+
+        <br>
+
+    <div class="movies-actors-section">
+        <h3>Recall the Movies and Actors You Loved, and Unlock Your Personalized Movie Recommendation!</h3>
+        <hr>
+        <div class="actors-container">
+            <form method="POST" id="form2" action="/chat">
+                <textarea id="multi-line-input" name="moviesAndActors" rows="10" cols="80" placeholder="Bullet Train with Brad Pitt..."></textarea>
+                <br>
+                <br>
+                <input type="hidden" id="requestInput" name="request" value="">
+                <button type="submit" id="submitBtn">Submit</button>
+            </form>
+        </div>
+
+    </div>
 <br>
 <hr>
 
@@ -93,6 +122,7 @@
             Mathias Wulff <br>
         </p>
 </footer>
+
 
 </body>
 </html>

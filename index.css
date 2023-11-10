@@ -1,77 +1,190 @@
-/* Improved CSS for the navigation bar and footer */
-body {
-    font-family: Arial, sans-serif;
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0; /* Light gray background */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
 }
 
 nav {
-    background-color: #1e202a; /* Dark gray navigation bar */
-    color: #fff;
-    text-align: center;
-    padding: 10px;
+    height: 80px;
+    background: #020609;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem calc((100vw - 1300px) / 2);
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
+.logo /* "Home Logo colour" */
+{
+    color: #fdcc04;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0 2rem;
+}
+
+nav a /* "Navigation Bar: Sevices, About and Contact colour" */
+{
+    text-decoration: none;
+    color: #fdcc04;
+    padding: 0 1.5rem;
+}
+
+nav a:hover /* Mouse hovering over text */
+{
+    color: #fff;
+}
+
+.hero /*Background Colour*/
+{
+    background: #fdcc04;
+}
+
+.hero-container /* Not sure */
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 95vh;
+    padding: 1rem calc((100vw - 1300px) / 2);
+}
+
+.column-left /* Headline colour and placement */
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: #000;
+    padding: 0rem 2rem;
+}
+
+.column-left h1 /*Headline Space and Size*/
+{
+    margin-bottom: 1rem;
+    font-size: 3rem;
+}
+
+.column-left p /* Button placement and distance */
+{
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+button /* Button colour and size */
+{
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    border: none;
+    color: #fdcc04;
+    background: #000;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+button:hover /* Mouse hovering over button text */
+{
+    background: #fff;
+    color: #000;
+}
+
+.column-right /*Not sure */
+{
     display: flex;
     justify-content: center;
+    align-items: center;
+    padding: 0rem 2rem;
 }
 
-nav ul li {
-    margin: 0 15px;
+.hero-image {
+    width: 100%;
+    height: auto%;
 }
 
-nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 18px; /* Slightly smaller text */
+@media screen and (max-width: 768px) {
+    .hero-container {
+        grid-template-columns: 1fr;
+    }
 }
 
-h1 {
-    text-align: center;
+
+
+/* SECTION 2 - PICK A GENRE */
+
+.genre-section {
+    background: #020609;
 }
 
 h2 {
-    margin: 0px;
+    font-size: 2rem;
+    color: #fdcc04;
+    margin: 50px auto;
     text-align: center;
 }
 
 .movie-container {
     text-align: center;
+    background: #fdcc04;
+    display: flex;
+    flex-direction: column; /* Change from row to column */
+    gap: 20px; /* Adjust the gap between checkboxes if needed */
+    padding: 185px; /* Add padding for better visual separation */
 }
 
-/* CSS for styling the submit button */
-button[type="submit"] {
-    background-color: #0074D9; /* Background color */
-    color: #fff; /* Text color */
-    padding: 10px 20px; /* Padding around text */
-    font-size: 18px; /* Font size */
-    border: none; /* Remove the border */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Show hand cursor on hover */
-    transition: background-color 0.3s; /* Smooth color transition on hover */
+.movie-container .row {
+    display: flex;
+    justify-content: space-between; /* Distribute items evenly in a row */
 }
 
-button[type="submit"]:hover {
-    background-color: #0056A0; /* Darker background color on hover */
+.movie-container label {
+    width: 100%; /* Make labels fill the entire width of the column */
+    display: block;
+    margin-bottom: 20px; /* Add some space between labels */
 }
 
+@media (min-width: 768px) {
+    .movie-container .row {
+        flex-direction: row; /* Change back to row on larger screens */
+    }
+}
+
+
+
+/*SECTION 3 - MOVIES AND ACTORS */
+
+.movies-actors-section {
+    background: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    max-width: 600px; /* Adjust the max-width as needed */
+    margin: 0 auto;
+}
+
+h3 /* Movies and Actors Headline */
+{
+    color: #020609;
+    margin: 50px;
+    text-align: center;
+}
+
+hr {
+    border-color: #020609; /* Set the color of the horizontal rule to match the header text color */
+}
+
+textarea, button
+{
+    margin-top: 10px; /* Add some spacing between elements */
+}
+
+/* SECTION 4 MOVIE RECOMMENDATION */
 #answerBox {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
 }
 
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff; /* White content background */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-    border-radius: 12px;
+textarea {
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 footer {
@@ -80,3 +193,6 @@ footer {
     text-align: center;
     padding: 10px;
 }
+
+
+
